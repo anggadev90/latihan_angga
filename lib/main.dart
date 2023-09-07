@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
       navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
-      home: MainNavigationView(),
+      home: ModuleListView(),
       builder: (context, child) => DebugView(
         context: context,
         child: child,
