@@ -34,10 +34,10 @@ class CartListView extends StatefulWidget {
             ),
             Expanded(
               child: ListView.builder(
-                itemCount: controller.products.length,
+                itemCount: controller.product.length,
                 padding: EdgeInsets.zero,
                 itemBuilder: (context, index) {
-                  var item = controller.products[index];
+                  var item = controller.product[index];
                   item["qty"] ?? 0;
                   return Container(
                     height: 96,
@@ -52,7 +52,7 @@ class CartListView extends StatefulWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: NetworkImage(
-                                item["photo"],
+                                item["photo"].toString(),
                               ),
                               fit: BoxFit.cover,
                             ),

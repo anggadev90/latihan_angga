@@ -19,7 +19,10 @@
         "cart_list",
         "cart_grid",
         "profile",
-        "edit_profile"
+        "edit_profile",
+        "faq",
+        "privacy_poilicy",
+        "tem of service"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

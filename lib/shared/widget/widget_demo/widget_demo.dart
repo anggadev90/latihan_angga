@@ -38,12 +38,12 @@ class _HUIWidgetDemoViewState extends State<HUIWidgetDemoView> {
             key: formKey,
             child: Column(
               children: [
-                QImagePicker(
-                  label: "Photo",
-                  validator: Validator.required,
-                  value: null,
-                  onChanged: (value) {},
-                ),
+                //  //QImagePicker(
+                //     label: "Photo",
+                //     validator: Validator.required,
+                //     value: null,
+                //     onChanged: (value) {},
+                //   ),
                 QTextField(
                   label: "Name",
                   hint: "Name",

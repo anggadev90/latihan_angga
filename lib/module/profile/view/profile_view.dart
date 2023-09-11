@@ -3,29 +3,29 @@ import 'package:hyper_ui/core.dart';
 import '../controller/profile_controller.dart';
 
 class ProfileView extends StatefulWidget {
-  const ProfileView({Key? key}) : super(key: key);
+  ProfileView({Key? key}) : super(key: key);
 
   Widget build(context, ProfileController controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Profile"),
-        actions: const [],
+        title: Text("Profile"),
+        actions: [],
       ),
       body: SingleChildScrollView(
         child: Container(
           width: MediaQuery.of(context).size.width,
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           child: Column(
-            children: const [
+            children: [
               CircleAvatar(
                 radius: 36.0,
                 backgroundImage: NetworkImage(
                   "https://i.ibb.co/PGv8ZzG/me.jpg",
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 4.0,
               ),
               Text(
@@ -35,7 +35,7 @@ class ProfileView extends StatefulWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 4.0,
               ),
               Text(
@@ -44,18 +44,19 @@ class ProfileView extends StatefulWidget {
                   fontSize: 12.0,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20.0,
               ),
-              const ListTile(
+              ListTile(
                 title: Text("Edit Profile"),
                 trailing: Icon(
                   Icons.chevron_right,
                   size: 24.0,
                 ),
+                onTap: () => Get.to(EditProfileView()),
               ),
               Divider(),
-              const ListTile(
+              ListTile(
                 title: Text("Change Password"),
                 trailing: Icon(
                   Icons.chevron_right,
@@ -63,31 +64,33 @@ class ProfileView extends StatefulWidget {
                 ),
               ),
               Divider(),
-              const ListTile(
-                title: Text("FAQ"),
-                trailing: Icon(
-                  Icons.chevron_right,
-                  size: 24.0,
-                ),
-              ),
+              ListTile(
+                  title: Text("FAQ"),
+                  trailing: Icon(
+                    Icons.chevron_right,
+                    size: 24.0,
+                  ),
+                  onTap: () => Get.to(FaqView())),
               Divider(),
-              const ListTile(
+              ListTile(
                 title: Text("Privacy Policy"),
                 trailing: Icon(
                   Icons.chevron_right,
                   size: 24.0,
                 ),
+                onTap: () => Get.to(PrivacyPoilicyView()),
               ),
               Divider(),
-              const ListTile(
+              ListTile(
                 title: Text("Tem of Service"),
                 trailing: Icon(
                   Icons.chevron_right,
                   size: 24.0,
                 ),
+                onTap: () => Get.to(TemOfServiceView()),
               ),
               Divider(),
-              const ListTile(
+              ListTile(
                 title: Text(
                   "Logout",
                   style: TextStyle(
