@@ -22,7 +22,10 @@
         "edit_profile",
         "faq",
         "privacy_poilicy",
-        "tem of service"
+        "tem of service",
+        "blog",
+        "blog_form",
+        "payment"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

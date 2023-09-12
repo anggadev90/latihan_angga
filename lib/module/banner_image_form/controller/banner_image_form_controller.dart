@@ -37,7 +37,7 @@ class BannerImageFormController extends State<BannerImageFormView> {
     } else {
       await BannerImageService().add({
         "banner_name": bannerName,
-        "phoyo": photo,
+        "photo": photo,
       });
     }
 

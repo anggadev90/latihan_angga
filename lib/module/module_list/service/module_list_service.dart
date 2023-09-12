@@ -54,5 +54,9 @@ class MouduleListService {
       "label": "Edit_profile",
       "view": EditProfileView(),
     },
+    {
+      "label": "Blog",
+      "view": BlogView(),
+    },
   ];
 }

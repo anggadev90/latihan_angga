@@ -34,10 +34,10 @@ class CartListView extends StatefulWidget {
             ),
             Expanded(
               child: ListView.builder(
-                itemCount: controller.product.length,
+                itemCount: controller.products.length,
                 padding: EdgeInsets.zero,
                 itemBuilder: (context, index) {
-                  var item = controller.product[index];
+                  var item = controller.products[index];
                   item["qty"] ??= 0;
                   return Container(
                     height: 96,
@@ -172,7 +172,7 @@ class CartListView extends StatefulWidget {
           children: [
             Expanded(
               child: Text(
-                "\$344.01",
+                "\$${controller.total}",
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -182,7 +182,7 @@ class CartListView extends StatefulWidget {
             Expanded(
               child: QActionButton(
                 label: "Checkout",
-                onPressed: () {},
+                onPressed: () => controller.doCheckout(),
               ),
             ),
           ],

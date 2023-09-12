@@ -59,11 +59,11 @@ class CartGridView extends StatefulWidget {
                     mainAxisSpacing: 8,
                     crossAxisSpacing: 8,
                   ),
-                  itemCount: controller.product.length,
+                  itemCount: controller.products.length,
                   shrinkWrap: true,
                   physics: ScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
-                    var item = controller.product[index];
+                    var item = controller.products[index];
                     item["qty"] ??= 0;
                     return Container(
                       child: Column(
@@ -181,7 +181,7 @@ class CartGridView extends StatefulWidget {
           children: [
             Expanded(
               child: Text(
-                "\$344.01",
+                "\$${controller.total}",
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -191,7 +191,7 @@ class CartGridView extends StatefulWidget {
             Expanded(
               child: QActionButton(
                 label: "Checkout",
-                onPressed: () {},
+                onPressed: () => controller.doCheckout(),
               ),
             ),
           ],

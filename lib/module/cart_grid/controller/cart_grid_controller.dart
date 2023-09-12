@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import '../../../service/payment_service/payment_service.dart';
 import '../view/cart_grid_view.dart';
 
 class CartGridController extends State<CartGridView> {
@@ -19,9 +20,9 @@ class CartGridController extends State<CartGridView> {
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  List product = [];
+  List products = [];
   getProduct() async {
-    product = await ProductService().getProduct();
+    products = await ProductService().getProduct();
     setState(() {});
   }
 
@@ -35,5 +36,25 @@ class CartGridController extends State<CartGridView> {
     item["qty"] ?? 0;
     item["qty"]--;
     setState(() {});
+  }
+
+  double get total {
+    double productTotal = 0;
+    for (var item in products) {
+      item["qty"] ??= 0;
+      productTotal += item["qty"] * item["price"];
+    }
+    return productTotal;
+  }
+
+  doCheckout() async {
+    String paymentUrl = await PaymentService().getPaymentLink(
+      total: total * 15000,
+    );
+    print(paymentUrl);
+
+    Get.to(PaymentView(
+      paymentUrl: paymentUrl,
+    ));
   }
 }
