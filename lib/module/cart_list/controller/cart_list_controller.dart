@@ -26,13 +26,13 @@ class CartListController extends State<CartListView> {
   }
 
   increaseQty(Map item) {
-    item["qty"] ?? 0;
+    item["qty"] ??= 0;
     item["qty"]++;
     setState(() {});
   }
 
   decreaseQty(Map item) {
-    item["qty"] ?? 0;
+    item["qty"] ??= 0;
     item["qty"]--;
     setState(() {});
   }

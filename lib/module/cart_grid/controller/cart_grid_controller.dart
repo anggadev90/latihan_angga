@@ -9,6 +9,7 @@ class CartGridController extends State<CartGridView> {
   @override
   void initState() {
     instance = this;
+    getProduct();
     super.initState();
   }
 

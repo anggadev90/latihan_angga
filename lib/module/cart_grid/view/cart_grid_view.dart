@@ -64,7 +64,7 @@ class CartGridView extends StatefulWidget {
                   physics: ScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     var item = controller.product[index];
-                    item["qty"] ?? 0;
+                    item["qty"] ??= 0;
                     return Container(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +76,8 @@ class CartGridView extends StatefulWidget {
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: NetworkImage(
-                                    item["photo"],
+                                    item["photo"] ??
+                                        "https://i.ibb.co/S32HNjD/no-image.jpg",
                                   ),
                                   fit: BoxFit.cover,
                                 ),

@@ -38,7 +38,7 @@ class CartListView extends StatefulWidget {
                 padding: EdgeInsets.zero,
                 itemBuilder: (context, index) {
                   var item = controller.product[index];
-                  item["qty"] ?? 0;
+                  item["qty"] ??= 0;
                   return Container(
                     height: 96,
                     margin: const EdgeInsets.only(
@@ -92,19 +92,10 @@ class CartListView extends StatefulWidget {
                               Row(
                                 children: [
                                   Text(
-                                    "\$${item["discount_price"]}",
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 6.0,
-                                  ),
-                                  Text(
                                     "\$${item["price"]}",
                                     style: TextStyle(
-                                      fontSize: 12.0,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ],
