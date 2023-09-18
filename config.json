@@ -25,7 +25,16 @@
         "tem of service",
         "blog",
         "blog_form",
-        "payment"
+        "payment",
+        "order_list1",
+        "order_list2",
+        "order_list3",
+        "order_list4",
+        "order_list5",
+        "login",
+        "todo_list",
+        "todo_form",
+        "dahsboard2"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

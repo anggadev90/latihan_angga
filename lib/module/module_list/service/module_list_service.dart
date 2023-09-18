@@ -58,5 +58,41 @@ class MouduleListService {
       "label": "Blog",
       "view": BlogView(),
     },
+    {
+      "label": "Order_list1",
+      "view": OrderList1View(),
+    },
+    {
+      "label": "Order_list2",
+      "view": OrderList2View(),
+    },
+    {
+      "label": "Order_list3",
+      "view": OrderList3View(),
+    },
+    {
+      "label": "Order_list4",
+      "view": OrderList4View(),
+    },
+    {
+      "label": "Order_list5",
+      "view": OrderList5View(),
+    },
+    {
+      "label": "Dashboard",
+      "view": DashboardView(),
+    },
+    {
+      "label": "Login",
+      "view": LoginView(),
+    },
+    {
+      "label": "Todo_list",
+      "view": TodoListView(),
+    },
+    {
+      "label": "Dashboard2",
+      "view": Dahsboard2View(),
+    },
   ];
 }
