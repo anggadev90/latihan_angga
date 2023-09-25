@@ -79,10 +79,6 @@ class MouduleListService {
       "view": OrderList5View(),
     },
     {
-      "label": "Dashboard",
-      "view": DashboardView(),
-    },
-    {
       "label": "Login",
       "view": LoginView(),
     },
@@ -91,8 +87,44 @@ class MouduleListService {
       "view": TodoListView(),
     },
     {
+      "label": "Dashboard",
+      "view": DashboardView(),
+    },
+    {
       "label": "Dashboard2",
       "view": Dahsboard2View(),
+    },
+    {
+      "label": "Dashboard3",
+      "view": Dashboard3View(),
+    },
+    {
+      "label": "Dashboard4",
+      "view": Dashboard4View(),
+    },
+    {
+      "label": "Dashboard5",
+      "view": Dashboard5View(),
+    },
+    {
+      "label": "Dashboard6",
+      "view": Dashboard6View(),
+    },
+    {
+      "label": "Dashboard7",
+      "view": Dashboard7View(),
+    },
+    {
+      "label": "Dashboard8",
+      "view": Dashboard8View(),
+    },
+    {
+      "label": "Dashboard9",
+      "view": Dashboard9View(),
+    },
+    {
+      "label": "Dashboard10",
+      "view": Dashboard10View(),
     },
   ];
 }

@@ -34,7 +34,15 @@
         "login",
         "todo_list",
         "todo_form",
-        "dahsboard2"
+        "dahsboard2",
+        "dashboard3",
+        "dashboard4",
+        "dashboard5",
+        "dashboard6",
+        "dashboard7",
+        "dashboard8",
+        "dashboard9",
+        "dashboard10"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
