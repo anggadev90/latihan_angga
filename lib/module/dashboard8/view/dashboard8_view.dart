@@ -58,7 +58,7 @@ class Dashboard8View extends StatefulWidget {
                     Expanded(
                       child: TextFormField(
                         initialValue: null,
-                        decoration: InputDecoration.collapsed(
+                        decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.transparent,
                           hintText: "World H|",
@@ -93,17 +93,7 @@ class Dashboard8View extends StatefulWidget {
               SizedBox(
                 height: 20.0,
               ),
-              Column(
-                children: [
-                  Text(
-                    "STUDYING",
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+              H6(title: "STUDYING"),
               SizedBox(
                 height: 10.0,
               ),
@@ -120,6 +110,9 @@ class Dashboard8View extends StatefulWidget {
                       width: 200,
                       decoration: BoxDecoration(
                         color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(8.0),
+                        ),
                       ),
                       margin: const EdgeInsets.only(
                         right: 10.0,

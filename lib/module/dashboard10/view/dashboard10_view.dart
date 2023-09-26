@@ -11,6 +11,7 @@ class Dashboard10View extends StatefulWidget {
     controller.view = this;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(20.0),
@@ -65,10 +66,12 @@ class Dashboard10View extends StatefulWidget {
                     ),
                   ),
                   CircleAvatar(
+                    radius: 18.0,
                     backgroundColor: Colors.blue,
                     child: Icon(
                       MdiIcons.plus,
                       color: Colors.white,
+                      size: 18.0,
                     ),
                   ),
                 ],
@@ -79,11 +82,12 @@ class Dashboard10View extends StatefulWidget {
               SizedBox(
                 height: 180.0,
                 child: ListView.builder(
-                  itemCount: 10,
+                  itemCount: controller.items.length,
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.zero,
                   clipBehavior: Clip.none,
                   itemBuilder: (context, index) {
+                    var item = controller.items[index];
                     return Container(
                       margin: EdgeInsets.only(
                         right: 20.0,
@@ -92,7 +96,7 @@ class Dashboard10View extends StatefulWidget {
                       height: 180.0,
                       width: 150,
                       decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: item["color"],
                         borderRadius: BorderRadius.all(
                           Radius.circular(
                             8.0,
@@ -105,7 +109,7 @@ class Dashboard10View extends StatefulWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "college saving",
+                                item["title"],
                                 style: TextStyle(
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.bold,
@@ -116,7 +120,7 @@ class Dashboard10View extends StatefulWidget {
                                 height: 4.0,
                               ),
                               Text(
-                                "R 334 883",
+                                "${item["amount"]}",
                                 style: TextStyle(
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
@@ -153,7 +157,7 @@ class Dashboard10View extends StatefulWidget {
                                   return Container(
                                     width: 150.0,
                                     height: 100.0,
-                                    color: Colors.red,
+                                    color: item["color"],
                                     padding: EdgeInsets.all(12.0),
                                     child: SfCartesianChart(
                                       primaryXAxis: NumericAxis(
@@ -201,6 +205,13 @@ class Dashboard10View extends StatefulWidget {
               ),
               Container(
                 decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0x19000000),
+                      blurRadius: 24,
+                      offset: Offset(0, 11),
+                    ),
+                  ],
                   color: Colors.white,
                   borderRadius: BorderRadius.all(
                     Radius.circular(12.0),
@@ -215,7 +226,7 @@ class Dashboard10View extends StatefulWidget {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: NetworkImage(
-                            "https://images.unsplash.com/photo-1533050487297-09b450131914?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                            "https://images.unsplash.com/photo-1628052225617-7fa2efacd978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80",
                           ),
                           fit: BoxFit.cover,
                         ),

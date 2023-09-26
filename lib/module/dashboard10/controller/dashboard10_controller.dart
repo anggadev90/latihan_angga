@@ -17,4 +17,17 @@ class Dashboard10Controller extends State<Dashboard10View> {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  List<Map> items = [
+    {
+      "title": "Sales",
+      "amount": 1300,
+      "color": Colors.red[400],
+    },
+    {
+      "title": "Purchase",
+      "amount": 1500,
+      "color": Colors.blue,
+    },
+  ];
 }
