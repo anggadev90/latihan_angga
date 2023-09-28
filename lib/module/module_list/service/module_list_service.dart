@@ -134,5 +134,9 @@ class MouduleListService {
       "label": "Dashboard12",
       "view": Dashboard12View(),
     },
+    {
+      "label": "Dashboard13",
+      "view": Dashboard13View(),
+    },
   ];
 }

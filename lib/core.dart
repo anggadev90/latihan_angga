@@ -34,6 +34,8 @@ export 'package:hyper_ui/module/dashboard11/controller/dashboard11_controller.da
 export 'package:hyper_ui/module/dashboard11/view/dashboard11_view.dart';
 export 'package:hyper_ui/module/dashboard12/controller/dashboard12_controller.dart';
 export 'package:hyper_ui/module/dashboard12/view/dashboard12_view.dart';
+export 'package:hyper_ui/module/dashboard13/controller/dashboard13_controller.dart';
+export 'package:hyper_ui/module/dashboard13/view/dashboard13_view.dart';
 export 'package:hyper_ui/module/dashboard3/controller/dashboard3_controller.dart';
 export 'package:hyper_ui/module/dashboard3/view/dashboard3_view.dart';
 export 'package:hyper_ui/module/dashboard4/controller/dashboard4_controller.dart';
