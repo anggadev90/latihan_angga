@@ -126,5 +126,13 @@ class MouduleListService {
       "label": "Dashboard10",
       "view": Dashboard10View(),
     },
+    {
+      "label": "Dashboard11",
+      "view": Dashboard11View(),
+    },
+    {
+      "label": "Dashboard12",
+      "view": Dashboard12View(),
+    },
   ];
 }
